@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Housing.Models", "Housing.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Housing.Services", "Housing.Services\Housing.Services.csproj", "{52F3219D-AAC9-4451-8E7E-EEB5869C4B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Housing.Scraping", "Housing.Scraping\Housing.Scraping.csproj", "{A7F353A5-20E1-4F86-B997-3DC893FB548F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{52F3219D-AAC9-4451-8E7E-EEB5869C4B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52F3219D-AAC9-4451-8E7E-EEB5869C4B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52F3219D-AAC9-4451-8E7E-EEB5869C4B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F353A5-20E1-4F86-B997-3DC893FB548F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F353A5-20E1-4F86-B997-3DC893FB548F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F353A5-20E1-4F86-B997-3DC893FB548F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F353A5-20E1-4F86-B997-3DC893FB548F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
