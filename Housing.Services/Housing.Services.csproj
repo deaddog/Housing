@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Flurl, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.5.1\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.0.1\lib\net45\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,7 +51,13 @@
   <ItemGroup>
     <Compile Include="Boligsiden\IBoligsidenRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
+    <Compile Include="GoogleDirections\GoogleDirectionsRepository.cs" />
     <Compile Include="GoogleDirections\IGoogleDirectionsRepository.cs" />
+    <Compile Include="GoogleDirections\InnerModels\Distance.cs" />
+    <Compile Include="GoogleDirections\InnerModels\Duration.cs" />
+    <Compile Include="GoogleDirections\InnerModels\Leg.cs" />
+    <Compile Include="GoogleDirections\InnerModels\Response.cs" />
+    <Compile Include="GoogleDirections\InnerModels\Route.cs" />
     <Compile Include="TjekDitNet\ITjekDitNetRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,6 +67,8 @@
       <Name>Housing.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
