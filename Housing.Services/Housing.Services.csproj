@@ -55,6 +55,8 @@
     <Compile Include="Boligsiden\BoligsidenRepository.cs" />
     <Compile Include="Boligsiden\BoligsidenHouseDetails.cs" />
     <Compile Include="Boligsiden\IBoligsidenRepository.cs" />
+    <Compile Include="eTilbudsavis\Dealer.cs" />
+    <Compile Include="eTilbudsavis\eTilbudsavisRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
     <Compile Include="GoogleDirections\GoogleDirectionsRepository.cs" />
     <Compile Include="GoogleDirections\IGoogleDirectionsRepository.cs" />
