@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Housing.Models;
 using System.Threading.Tasks;
 
 namespace Housing.Services.Boligsiden
 {
     public interface IBoligsidenRepository
     {
+        Task<BoligsidenHouseDetails> GetHouseDetailsAsync(AddressLocation address);
     }
 }

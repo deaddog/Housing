@@ -36,6 +36,9 @@
     <Reference Include="Flurl.Http, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Flurl.Http.2.0.1\lib\net45\Flurl.Http.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -49,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boligsiden\BoligsidenRepository.cs" />
+    <Compile Include="Boligsiden\BoligsidenHouseDetails.cs" />
     <Compile Include="Boligsiden\IBoligsidenRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
     <Compile Include="GoogleDirections\GoogleDirectionsRepository.cs" />
@@ -65,6 +70,10 @@
     <ProjectReference Include="..\Housing.Models\Housing.Models.csproj">
       <Project>{52ec284b-d11a-42ca-8c35-31a436c56189}</Project>
       <Name>Housing.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Housing.Scraping\Housing.Scraping.csproj">
+      <Project>{A7F353A5-20E1-4F86-B997-3DC893FB548F}</Project>
+      <Name>Housing.Scraping</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
