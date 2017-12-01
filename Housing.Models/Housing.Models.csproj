@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B431C4A3-EB56-4827-A07B-6B1BDAC83260}</ProjectGuid>
+    <ProjectGuid>{52EC284B-D11A-42CA-8C35-31A436C56189}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Housing</RootNamespace>
-    <AssemblyName>Housing</AssemblyName>
+    <RootNamespace>Housing.Models</RootNamespace>
+    <AssemblyName>Housing.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,13 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressLocation.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AreaUnits.cs" />
+    <Compile Include="Distance.cs" />
+    <Compile Include="EnergyTypes.cs" />
+    <Compile Include="GeoLocation.cs" />
+    <Compile Include="House.cs" />
+    <Compile Include="HouseImage.cs" />
+    <Compile Include="ImageTypes.cs" />
+    <Compile Include="InternetConnectionTypes.cs" />
+    <Compile Include="InternetOption.cs" />
+    <Compile Include="CategoryRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Housing.Models\Housing.Models.csproj">
-      <Project>{52ec284b-d11a-42ca-8c35-31a436c56189}</Project>
-      <Name>Housing.Models</Name>
-    </ProjectReference>
+    <Compile Include="Rating.cs" />
+    <Compile Include="Shop.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
