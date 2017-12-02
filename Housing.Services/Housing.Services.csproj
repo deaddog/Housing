@@ -68,6 +68,7 @@
     <Compile Include="eTilbudsavis\Dealer.cs" />
     <Compile Include="eTilbudsavis\eTilbudsavisRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
+    <Compile Include="GoogleDirections\CachedGoogleDirectionsRepository.cs" />
     <Compile Include="GoogleDirections\GoogleDirectionsRepository.cs" />
     <Compile Include="GoogleDirections\GoogleDirectionsRepositoryExtension.cs" />
     <Compile Include="GoogleDirections\IGoogleDirectionsRepository.cs" />

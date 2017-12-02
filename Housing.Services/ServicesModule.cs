@@ -21,10 +21,15 @@ namespace Housing.Services
             _eTilbudSecretKey = eTilbudSecretKey ?? throw new ArgumentNullException(nameof(eTilbudSecretKey));
         }
 
+        public string GoogleDirectionsCacheDirectory { get; set; }
+
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<BoligsidenRepository>().As<IBoligsidenRepository>().SingleInstance();
-            builder.Register(_ => new GoogleDirectionsRepository(_googleApiKey)).As<IGoogleDirectionsRepository>().SingleInstance();
+            if (GoogleDirectionsCacheDirectory == null)
+                builder.Register(_ => new GoogleDirectionsRepository(_googleApiKey)).As<IGoogleDirectionsRepository>().SingleInstance();
+            else
+                builder.Register(_ => new CachedGoogleDirectionsRepository(new GoogleDirectionsRepository(_googleApiKey), GoogleDirectionsCacheDirectory)).As<IGoogleDirectionsRepository>().SingleInstance();
             builder.Register(_ => new eTilbudsavisRepository(_eTilbudApiKey, _eTilbudSecretKey)).As<IeTilbudsavisRepository>().SingleInstance();
             builder.RegisterType<DawaRepository>().As<IDawaRepository>().SingleInstance();
             builder.RegisterType<TjekDitNetRepository>().As<ITjekDitNetRepository>().SingleInstance();
