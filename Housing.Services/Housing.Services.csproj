@@ -55,6 +55,9 @@
     <Compile Include="Boligsiden\BoligsidenRepository.cs" />
     <Compile Include="Boligsiden\BoligsidenHouseDetails.cs" />
     <Compile Include="Boligsiden\IBoligsidenRepository.cs" />
+    <Compile Include="Dawa\DawaAddress.cs" />
+    <Compile Include="Dawa\DawaRepository.cs" />
+    <Compile Include="Dawa\IDawaRepository.cs" />
     <Compile Include="eTilbudsavis\Dealer.cs" />
     <Compile Include="eTilbudsavis\eTilbudsavisRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
@@ -81,5 +84,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
