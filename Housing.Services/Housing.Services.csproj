@@ -69,6 +69,7 @@
     <Compile Include="eTilbudsavis\eTilbudsavisRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />
     <Compile Include="GoogleDirections\GoogleDirectionsRepository.cs" />
+    <Compile Include="GoogleDirections\GoogleDirectionsRepositoryExtension.cs" />
     <Compile Include="GoogleDirections\IGoogleDirectionsRepository.cs" />
     <Compile Include="GoogleDirections\InnerModels\Distance.cs" />
     <Compile Include="GoogleDirections\InnerModels\Duration.cs" />
