@@ -55,6 +55,9 @@ namespace Housing.Services.Boligsiden
             var response = await $"https://www.boligsiden.dk/propertysearch/savequicksearch?query={addressQuery}&itemTypes=100|200|300|400|500|600|700|800|900&completionType=8&itemType=Property"
                 .GetJsonAsync<JToken>();
 
+            if (response["type"].Value<string>() == "SUGGESTIONLIST" && location.Town != null)
+                return await GetHouseId(new AddressLocation(location.Street, location.PostalCode, location.City));
+
             if (response["url"] == null)
                 throw new Exception("No url property in Boligsiden response");
 
