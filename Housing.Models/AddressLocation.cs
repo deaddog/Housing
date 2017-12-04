@@ -5,6 +5,12 @@ namespace Housing.Models
 {
     public class AddressLocation
     {
+        public static AddressLocation Parse(string address)
+        {
+            var addressMatch = Regex.Match(address, @"^(.*[^ ]) *, *(\d{4} .*)$");
+
+            return Parse(addressMatch.Groups[1].Value, addressMatch.Groups[2].Value);
+        }
         public static AddressLocation Parse(string streetAndTown, string postalCodeAndCity)
         {
             var streetMatch = Regex.Match(streetAndTown, "^(.*[^ ]) *, *([^ ].*)$");
