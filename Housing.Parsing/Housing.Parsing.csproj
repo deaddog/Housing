@@ -65,6 +65,7 @@
     <Compile Include="EstateAgentHouseParser.cs" />
     <Compile Include="EstateAgentParsers\EdcEstateAgentParser.cs" />
     <Compile Include="EstateAgentParsers\EstateEstateAgentParser.cs" />
+    <Compile Include="EstateAgentParsers\HomeEstateAgentParser.cs" />
     <Compile Include="IEstateAgentHouseParser.cs" />
     <Compile Include="IHouseParser.cs" />
     <Compile Include="ParsingModule.cs" />
