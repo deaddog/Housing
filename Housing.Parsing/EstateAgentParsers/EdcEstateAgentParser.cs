@@ -20,12 +20,8 @@ namespace Housing.Parsing.EstateAgentParsers
 
             var adr = adrNode.ChildNodes[0].DecodedInnerHtml().Trim().Trim(',').Trim();
             var codeCity = adrNode.ChildNodes[1].DecodedInnerHtml().Trim().Trim(',').Trim();
-            var m = Regex.Match(codeCity, @"(\d+) *([^ ].*)");
 
-            var postal = int.Parse(m.Groups[1].Value);
-            var city = m.Groups[2].Value;
-
-            return new AddressLocation(adr, postal, city);
+            return AddressLocation.Parse(adr, codeCity);
         }
         public async Task<double> GetPrice(HtmlDocument document)
         {

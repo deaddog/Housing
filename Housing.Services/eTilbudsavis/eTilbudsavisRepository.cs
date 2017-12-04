@@ -85,14 +85,13 @@ namespace Housing.Services.eTilbudsavis
                 .GetJsonListAsync()
                 .ConfigureAwait(false);
 
-            return shops.Select(x => new Shop(
-                x.Branding.Name,
-                new AddressLocation(
-                    x.Street,
-                    x.ZipCode,
-                    x.City
-                )
-            )).ToList();
+            return shops.Select(x =>
+            {
+                return new Shop(
+                    x.branding.name,
+                    AddressLocation.Parse(x.street, $"{x.zip_code} {x.city}")
+                );
+            }).ToList();
         }
     }
 }
