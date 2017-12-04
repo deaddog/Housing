@@ -37,6 +37,8 @@ namespace Housing.Parsing
         private readonly IDawaRepository _dawa;
         private readonly ITjekDitNetRepository _tjekditnet;
 
+        public delegate EstateAgentHouseParser Factory(IEstateAgentHouseParser parser);
+
         public EstateAgentHouseParser(IEstateAgentHouseParser parser, IBoligsidenRepository boligSiden, IeTilbudsavisRepository eTilbudsavis, IDawaRepository dawa, ITjekDitNetRepository tjekditnet)
         {
             _parser = parser ?? throw new ArgumentNullException(nameof(parser));

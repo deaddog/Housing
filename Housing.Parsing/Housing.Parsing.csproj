@@ -62,6 +62,7 @@
     <Compile Include="EstateAgentHouseParser.cs" />
     <Compile Include="IEstateAgentHouseParser.cs" />
     <Compile Include="IHouseParser.cs" />
+    <Compile Include="ParsingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EstateAgentParsers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
