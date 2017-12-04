@@ -74,14 +74,16 @@ namespace Housing.Parsing
             var shops = await _eTilbudsavis.GetShops(boligSidenHouse.Location, new string[0]);
             var internetOptions = dawaHouse != null ? await _tjekditnet.GetHouseInternetspeeds(dawaHouse.AddressId, dawaHouse.PostalCode) : new InternetOption[0];
 
+            var today = DateTime.Today;
+
             return new House(
                 houseUri,
                 address,
                 groundArea,
                 houseArea,
                 energyType,
-                DateTime.Now.Add(boligSidenHouse.SalesPeriod),
-                DateTime.Now.Add(boligSidenHouse.SalesPeriodTotal ?? boligSidenHouse.SalesPeriod),
+                today.Subtract(boligSidenHouse.SalesPeriod),
+                today.Subtract(boligSidenHouse.SalesPeriodTotal ?? boligSidenHouse.SalesPeriod),
                 images,
                 internetOptions,
                 shops,

@@ -24,7 +24,7 @@ namespace Housing.Models
                 throw new ArgumentException($"House url should use {Uri.UriSchemeHttp} or {Uri.UriSchemeHttps}.", nameof(houseUrl));
 
             if (originalForSaleDate > forSaleDate)
-                throw new ArgumentOutOfRangeException(nameof(forSaleDate), "Original for sale date cannot come before the current for sale date.");
+                throw new ArgumentOutOfRangeException(nameof(forSaleDate), "Original for sale date cannot be later than the current for sale date.");
 
             if (forSaleDate > DateTime.Now)
                 throw new ArgumentOutOfRangeException(nameof(forSaleDate), "For sale date cannot be in the future.");
