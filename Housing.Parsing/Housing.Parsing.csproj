@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EstateAgentHouseParser.cs" />
     <Compile Include="IEstateAgentHouseParser.cs" />
     <Compile Include="IHouseParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

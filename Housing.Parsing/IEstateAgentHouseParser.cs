@@ -9,14 +9,14 @@ namespace Housing.Parsing
     {
         string SupportedDomain { get; }
 
-        Task<AddressLocation> GetAddress(HtmlDocument doc);
+        Task<AddressLocation> GetAddress(HtmlDocument document);
 
-        Task<Area> GetHouseArea(HtmlDocument doc);
-        Task<Area> GetGroundArea(HtmlDocument doc);
+        Task<Area> GetHouseArea(HtmlDocument document);
+        Task<Area> GetGroundArea(HtmlDocument document);
 
-        Task<double> GetPrice(HtmlDocument doc);
-        Task<EnergyTypes> GetEnergyType(HtmlDocument doc);
+        Task<double> GetPrice(HtmlDocument document);
+        Task<EnergyTypes> GetEnergyType(HtmlDocument document);
 
-        Task<IEnumerable<HouseImage>> GetImages(HtmlDocument doc);
+        Task<IEnumerable<HouseImage>> GetImages(HtmlDocument document);
     }
 }
