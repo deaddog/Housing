@@ -34,7 +34,7 @@ namespace Housing.Services.eTilbudsavis
                 .ReceiveJson()
                 .ConfigureAwait(false);
 
-            return response.Token;
+            return response.token;
         }
         private string GetSignature()
         {
