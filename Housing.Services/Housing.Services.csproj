@@ -65,6 +65,7 @@
     <Compile Include="Dawa\DawaAddress.cs" />
     <Compile Include="Dawa\DawaRepository.cs" />
     <Compile Include="Dawa\IDawaRepository.cs" />
+    <Compile Include="Dawa\InnerModels\AddressElement.cs" />
     <Compile Include="eTilbudsavis\Dealer.cs" />
     <Compile Include="eTilbudsavis\eTilbudsavisRepository.cs" />
     <Compile Include="eTilbudsavis\IeTilbudsavisRepository.cs" />

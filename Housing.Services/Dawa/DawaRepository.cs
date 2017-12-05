@@ -1,6 +1,8 @@
 ﻿using Flurl;
 using Flurl.Http;
 using Housing.Models;
+using Housing.Services.Dawa.InnerModels;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Housing.Services.Dawa
@@ -9,9 +11,11 @@ namespace Housing.Services.Dawa
     {
         public async Task<DawaAddress[]> SearchForHouse(AddressLocation address)
         {
-            return await $"https://dawa.aws.dk/adgangsadresser/autocomplete"
+            var response = await $"https://dawa.aws.dk/adgangsadresser/autocomplete"
                 .SetQueryParam("q", GetParameter(address))
-                .GetJsonAsync<DawaAddress[]>();
+                .GetJsonAsync<AddressElement[]>();
+
+            return response.Select(a => a.Address).ToArray();
         }
 
         private static string GetParameter(AddressLocation address)
