@@ -70,6 +70,7 @@
     <Compile Include="EstateAgentParsers\NyBoligEstateAgentParser.cs" />
     <Compile Include="EstateAgentParsers\ThorkildKristensenEstateAgentParser.cs" />
     <Compile Include="EstateAgentParsers\VilladsenBoligEstateAgentParser.cs" />
+    <Compile Include="EstateAgentParsers\WestergaardBoligEstateAgentParser.cs" />
     <Compile Include="IEstateAgentHouseParser.cs" />
     <Compile Include="IHouseParser.cs" />
     <Compile Include="ParsingModule.cs" />
